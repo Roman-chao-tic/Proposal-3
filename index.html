@@ -17,13 +17,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('usss.jpg') no-repeat center center;
-            background-size: cover;
-            background-color: black;
-            overflow: hidden;
-            font-family: "Courier New", Courier, monospace;
             text-align: center;
-            padding: 0 5%;
+            background: url('usss.jpg') center center no-repeat;
+            background-size: contain; /* Ensures full image is visible */
+            background-color: black;
+            font-family: "Courier New", Courier, monospace;
+            padding: 10px; /* Prevents text from touching screen edges */
         }
 
         .headline, .sub-headline {
@@ -41,13 +40,12 @@
         }
 
         .headline {
-            margin-top: 5vh;
-            font-size: 8vw; /* Scales with screen width */
+            font-size: 7vw; /* Scales dynamically */
         }
 
         .sub-headline {
             margin-top: 2vh;
-            font-size: 5vw; /* Responsive for smaller screens */
+            font-size: 4vw; /* Smaller text for mobile */
         }
 
         @keyframes rainbowGlow {
