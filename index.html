@@ -19,43 +19,44 @@
             align-items: center;
             text-align: center;
             background: url('usss.jpg') center center no-repeat;
-            background-size: contain; /* Ensures full image is visible */
+            background-size: contain; /* Ensures the full image is visible */
             background-color: black;
             font-family: "Courier New", Courier, monospace;
-            padding: 10px; /* Prevents text from touching screen edges */
+            padding: 5vh 5vw; /* Adds spacing to prevent text from touching edges */
         }
 
         .headline, .sub-headline {
             font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: white;
-            text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 
-                         0 0 20px green, 0 0 25px cyan, 0 0 30px blue, 0 0 35px violet;
+            text-shadow: 0 0 3px red, 0 0 6px orange, 0 0 9px yellow, 
+                         0 0 12px green, 0 0 15px cyan, 0 0 18px blue, 0 0 21px violet;
             animation: rainbowGlow 2s infinite alternate, pixelate 0.05s infinite steps(1);
-            padding: 10px;
+            padding: 8px;
             backdrop-filter: blur(5px);
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5); /* Darker background for better readability */
             border-radius: 10px;
+            max-width: 90%; /* Ensures text doesn't go too wide */
         }
 
         .headline {
-            font-size: 7vw; /* Scales dynamically */
+            font-size: 5vw; /* Smaller and responsive */
+            margin-bottom: 2vh; /* Spacing between headline and sub-headline */
         }
 
         .sub-headline {
-            margin-top: 2vh;
-            font-size: 4vw; /* Smaller text for mobile */
+            font-size: 3vw; /* Scales properly on mobile */
         }
 
         @keyframes rainbowGlow {
             0% {
-                text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 
-                             0 0 20px green, 0 0 25px cyan, 0 0 30px blue, 0 0 35px violet;
+                text-shadow: 0 0 3px red, 0 0 6px orange, 0 0 9px yellow, 
+                             0 0 12px green, 0 0 15px cyan, 0 0 18px blue, 0 0 21px violet;
             }
             100% {
-                text-shadow: 0 0 15px violet, 0 0 20px blue, 0 0 25px cyan, 
-                             0 0 30px green, 0 0 35px yellow, 0 0 40px orange, 0 0 45px red;
+                text-shadow: 0 0 9px violet, 0 0 12px blue, 0 0 15px cyan, 
+                             0 0 18px green, 0 0 21px yellow, 0 0 24px orange, 0 0 27px red;
             }
         }
 
@@ -63,13 +64,24 @@
             0% { transform: scale(1); }
             100% { transform: scale(1.01); }
         }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .headline {
+                font-size: 6vw; /* Slightly larger for small screens */
+            }
+            .sub-headline {
+                font-size: 4vw;
+            }
+        }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="headline">CONGRATULATIONS!!!!!!</div>
-    <div class="sub-headline">You are now my Girlfriend🤭🤭</div>
+    <div class="headline">CONGRATULATIONS!</div>
+    <div class="sub-headline">You are now my Girlfriend 🤭🤭</div>
 
 </body>
 </html>
