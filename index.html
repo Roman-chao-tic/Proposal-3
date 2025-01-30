@@ -14,15 +14,24 @@
         body {
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             background: url('usss.jpg') center center no-repeat;
-            background-size: contain; /* Ensures the full image is visible */
+            background-size: contain; /* Ensures full image is visible */
             background-color: black;
             font-family: "Courier New", Courier, monospace;
-            padding: 5vh 5vw; /* Adds spacing to prevent text from touching edges */
+            position: relative;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 5vh; /* Moves text to the top */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
         }
 
         .headline, .sub-headline {
@@ -37,16 +46,16 @@
             backdrop-filter: blur(5px);
             background: rgba(0, 0, 0, 0.5); /* Darker background for better readability */
             border-radius: 10px;
-            max-width: 90%; /* Ensures text doesn't go too wide */
+            max-width: 90%;
         }
 
         .headline {
-            font-size: 5vw; /* Smaller and responsive */
-            margin-bottom: 2vh; /* Spacing between headline and sub-headline */
+            font-size: 5vw;
+            margin-bottom: 2vh;
         }
 
         .sub-headline {
-            font-size: 3vw; /* Scales properly on mobile */
+            font-size: 3vw;
         }
 
         @keyframes rainbowGlow {
@@ -68,7 +77,7 @@
         /* Mobile Optimization */
         @media (max-width: 600px) {
             .headline {
-                font-size: 6vw; /* Slightly larger for small screens */
+                font-size: 6vw;
             }
             .sub-headline {
                 font-size: 4vw;
@@ -80,8 +89,10 @@
 </head>
 <body>
 
-    <div class="headline">CONGRATULATIONS!</div>
-    <div class="sub-headline">You are now my Girlfriend 🤭🤭</div>
+    <div class="text-container">
+        <div class="headline">CONGRATULATIONS!</div>
+        <div class="sub-headline">You are now my Girlfriend 🤭🤭</div>
+    </div>
 
 </body>
 </html>
